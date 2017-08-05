@@ -7,8 +7,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc",
-    "test": "mocha ./dist/test/**/*.spec.js",
-    "test:local": "mocha $NODE_DEBUG_OPTION --compilers ts:ts-node/register,tsx:ts-node/register ./test/**/*.spec.ts"
+    "test": "mocha $NODE_DEBUG_OPTION --compilers ts:ts-node/register,tsx:ts-node/register ./test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
