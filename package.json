@@ -2,10 +2,13 @@
   "name": "manage-vbox",
   "version": "0.0.1",
   "description": "Interface to interact with vboxmanage in Node.js",
-  "main": "index.js",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "tsc",
-    "test": "mocha --compilers ts:ts-node/register,tsx:ts-node/register ./test/**/*.spec.ts"
+    "test": "mocha ./dist/test/**/*.spec.js",
+    "test:local": "mocha $NODE_DEBUG_OPTION --compilers ts:ts-node/register,tsx:ts-node/register ./test/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -24,10 +27,17 @@
   "homepage": "https://github.com/mcflis/node-vboxmanage#readme",
   "devDependencies": {
     "@types/chai": "^4.0.2",
+    "@types/chai-as-promised": "0.0.31",
     "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.19",
     "chai": "^4.1.1",
+    "chai-as-promised": "^7.1.1",
     "mocha": "^3.5.0",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "@types/es6-promise": "0.0.32",
+    "virtualbox": "^0.1.3"
   }
 }
