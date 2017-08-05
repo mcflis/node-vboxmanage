@@ -1,2 +1,5 @@
 lib/
 test/
+.idea/
+dist/**/*.map
+dist/test/*.d.ts
