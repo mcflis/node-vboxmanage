@@ -59,3 +59,5 @@ typings/
 
 # Custom
 .idea/
+dist/**/*.map
+dist/test/*.d.ts
