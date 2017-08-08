@@ -6,6 +6,14 @@
     "outDir": "./dist",
     "removeComments": true,
     "strict": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "typeRoots": [
+      "./types",
+      "./node_modules/@types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./types/*"]
+    }
   }
 }
