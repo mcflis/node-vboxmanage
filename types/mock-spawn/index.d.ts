@@ -3,8 +3,7 @@
 // Definitions by: Maximilian Flis <https://github.com/mcflis>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { SpawnOptions } from "child_process";
-import { EventEmitter } from 'events';
+import { ChildProcess, SpawnOptions } from "child_process";
 
 export = mock_spawn;
 
@@ -28,7 +27,7 @@ interface Sequence {
     add(runner: Runner|RunnerObject): void;
 }
 
-interface MockProcess extends EventEmitter {
+interface MockProcess extends ChildProcess {
     command: string;
     args: string;
     opts: SpawnOptions;
